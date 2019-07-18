@@ -49,10 +49,12 @@ function setup() {
     enemyPosX = random(25, 875);
     enemyPosY = random(100, 875);
 
-    //Load in images
+
+    backdrop = loadImage("backdrop.png")
+        //Load in images
     android = loadImage("android.png") //we need to input the EXACT name of our image. 
     apple = loadImage("apple.png")
-    backdrop = loadImage("backdrop.png")
+
 
 }
 
@@ -64,6 +66,8 @@ function draw() {
     b = random(255);
     //you can input these variables for "fill()" if you want the user square to flash with random colors
 
+    //Here is the backdrop
+    image(backdrop, width, height, height, height)
 
     //instead of drawing the user and enemy squares, we'll do this
     //here is the enemy togepi
@@ -72,8 +76,8 @@ function draw() {
     //here is the user clefairy
     image(android, myPosX, myPosY, myWidth, myHeight);
 
-    //Here is the backdrop
-    image(backdrop, width / 2, height / 2, height / 2, height / 2)
+
+
 
 
 
