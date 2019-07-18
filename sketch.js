@@ -10,7 +10,7 @@
 
 let myPosX = 25;
 let myPosY = 25;
-let mySpeed = 10; //this global variable makes it MUCH easier to change our movement speed
+let mySpeed = 6; //this global variable makes it MUCH easier to change our movement speed
 let myWidth = 50;
 let myHeight = 50;
 
@@ -36,11 +36,13 @@ let android;
 let apple;
 //N.B. ".png" files are good for graphics because we only will get the image, NOT  a (tacky) background
 
+let backdrop;
+
 function setup() {
     createCanvas(900, 900);
     background(0);
 
-    rectMode(CENTER); //makes the center of the canvas the origin point of our square
+    imageMode(CENTER); //makes the center of the canvas the origin point of our square
 
 
     //determine random starting position of "enemy" square
@@ -50,6 +52,7 @@ function setup() {
     //Load in images
     android = loadImage("android.png") //we need to input the EXACT name of our image. 
     apple = loadImage("apple.png")
+    backdrop = loadImage("backdrop.png")
 
 }
 
@@ -69,7 +72,8 @@ function draw() {
     //here is the user clefairy
     image(android, myPosX, myPosY, myWidth, myHeight);
 
-
+    //Here is the backdrop
+    image(backdrop, width / 2, height / 2, height / 2, height / 2)
 
 
 
