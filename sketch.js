@@ -32,8 +32,8 @@ let points = 0;
 let coins = 0;
 
 //Declare variables for graphics
-let clefairy;
-let togepi;
+let android;
+let apple;
 //N.B. ".png" files are good for graphics because we only will get the image, NOT  a (tacky) background
 
 function setup() {
@@ -48,8 +48,8 @@ function setup() {
     enemyPosY = random(100, 875);
 
     //Load in images
-    clefairy = loadImage("clefairy.png") //we need to input the EXACT name of our image. 
-    togepi = loadImage("togepi.png")
+    android = loadImage("android.png") //we need to input the EXACT name of our image. 
+    apple = loadImage("apple.png")
 
 }
 
@@ -64,10 +64,10 @@ function draw() {
 
     //instead of drawing the user and enemy squares, we'll do this
     //here is the enemy togepi
-    image(togepi, enemyPosX, enemyPosY, enemyWidth, enemyHeight); //this draws an image(the image "togepi", at "enemyPosX" and "Y" and then, use the size: "enemyWidth", "enemyHeight")
+    image(apple, enemyPosX, enemyPosY, enemyWidth, enemyHeight); //this draws an image(the image "togepi", at "enemyPosX" and "Y" and then, use the size: "enemyWidth", "enemyHeight")
 
     //here is the user clefairy
-    image(clefairy, myPosX, myPosY, myWidth, myHeight);
+    image(android, myPosX, myPosY, myWidth, myHeight);
 
 
 
